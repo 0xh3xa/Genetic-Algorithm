@@ -29,7 +29,7 @@ def fitness_func(solutions, solution_idx):
 
 ### Parameters
 
-<i><ins>Note: This is the parameters which are used for the implementation, you can fine tune them and see the output</ins></i>
+<i><ins>Note: The parameters which are used for the implementation, you can fine tune them and see the output</ins></i>
 
 <table border="2">
     <tr>
