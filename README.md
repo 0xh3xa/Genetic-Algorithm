@@ -208,7 +208,7 @@ It must be >0 and <=100
 
 * PyGad initialize_population with the following (init_range_low, init_range_high, allow_duplicate_genes, True, gene_type)
 
-* For more information about parameters visit <a href="">PyGad Documentation</a>
+* For more information about parameters visit <a href="https://pygad.readthedocs.io/en/latest/">PyGad Documentation</a>
 
 
 ### GA Pattern
