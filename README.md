@@ -117,7 +117,7 @@ These variables are assigned values and passed to GA class
             init_range_high
         </td>
         <td>
-            mutation value is selected randomly init_range_low and init_range_high from the range specified by the
+            Mutation value is selected randomly init_range_low and init_range_high from the range specified by the
         </td>
         <td>
             init_range_low = 0
@@ -129,7 +129,7 @@ These variables are assigned values and passed to GA class
             parent_selection_type
         </td>
         <td>
-            parent selection type are:
+            Parent selection type are:
             <ol>
                 <li>steady-state selection (sss)</li>
                 <li>roulette wheel selection (rws)</li>
@@ -178,7 +178,7 @@ These variables are assigned values and passed to GA class
             mutation_type
         </td>
         <td>
-            mutation operation are:
+            Mutation operations are:
             <ol>
                 <li>random mutation (random)</li>
                 <li>swap mutation (swap)</li>
@@ -196,9 +196,7 @@ These variables are assigned values and passed to GA class
             mutation_percent_genes
         </td>
         <td>
-            Percentage of genes to mutate
-10% of the genes will be mutated
-It must be >0 and <=100
+            Percentage of genes to mutate, it must be >0 and <=100
         </td>
         <td>
             mutation_percent_genes = 10
@@ -209,7 +207,6 @@ It must be >0 and <=100
 * PyGad initialize_population with the following (init_range_low, init_range_high, allow_duplicate_genes, True, gene_type)
 
 * For more information about parameters visit <a href="https://pygad.readthedocs.io/en/latest/">PyGad Documentation</a>
-
 
 ### GA Pattern
 
