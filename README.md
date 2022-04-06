@@ -1,16 +1,26 @@
-## Genetic Algorithm GA class
+### Genetic Algorithm GA class
 
-This repository contains the practical for the Genetic Algorithm GA class
+This repository contains the practical for the Genetic Algorithm (GA) class
+[![hello_genetic](https://img.shields.io/static/v1?label=Genetic&message=Algorithms&color=blue&style=flat)](https://github.com/EbGazar/Genetic-Algorithm)
+[![Python](https://img.shields.io/static/v1?label=Language&message=Python&color=lightblue&style=flat)](https://github.com/EbGazar/Genetic-Algorithm)
 
-## What is Genetic Algorithm (GA)
+### What is Genetic Algorithm (GA)
 
-## Pros and Cons of Genetic Algorithm (GA)
+### Pros and Cons of Genetic Algorithm (GA)
 
-## Application of Genetic Algorithm (GA)
+### Application of Genetic Algorithm (GA)
 
-## Machine Learning vs. Neural Networks vs. Deep Learning vs. Genetic Genetic Algorithm (GA)
+### Machine Learning vs. Neural Networks vs. Deep Learning vs. Genetic Genetic Algorithm (GA)
 
-## Technologies
+### Environment Setup
+
+1. VS Code
+2. Python-3
+3. Anaconda (Optional)
+4. PyGad
+5. PyGame
+
+### Technologies
 
 Some solutions are using libraries like PyGad while others not (Pure Python implementation). Some problems' solutions are both using libraries and Pure Python.
 
@@ -19,18 +29,18 @@ The Libraries which are used
 1. PyGad
 2. PyGame
 
-## Problems
+### Problems
 
 1. Linear Model
 2. Square function
 3. Traveling salesman problem (TSP)
 4. Simple Linear Regression
 
-## PyGad
+#### PyGad
 
 Is an open-source Python library for building the genetic algorithm and optimizing machine learning algorithms. It works with Keras and PyTorch. <a href="https://pygad.readthedocs.io/en/latest/">More</a>
 
-### GA class parameters in PyGad library
+#### GA class parameters in PyGad library
 
 These variables are assigned values and passed to GA class
 
@@ -47,7 +57,7 @@ These variables are assigned values and passed to GA class
         </th>
     </tr>
     <tr>
-        <td style="background-color:silver;">
+        <td>
             fitness_function
         </td>
         <td>
@@ -69,7 +79,7 @@ These variables are assigned values and passed to GA class
         </td>
     </tr>
     <tr>
-        <td style="background-color:silver;">
+        <td>
             num_parents_mating
         </td>
         <td>
@@ -91,7 +101,7 @@ These variables are assigned values and passed to GA class
         </td>
     </tr>
     <tr>
-        <td style="background-color:silver;">
+        <td>
             num_genes
         </td>
         <td>
@@ -115,7 +125,7 @@ These variables are assigned values and passed to GA class
         </td>
     </tr>
     <tr>
-        <td style="background-color:silver;">
+        <td>
             parent_selection_type
         </td>
         <td>
@@ -147,7 +157,7 @@ These variables are assigned values and passed to GA class
         </td>
     </tr>
     <tr>
-        <td style="background-color:silver;">
+        <td>
             crossover_type
         </td>
         <td>
@@ -182,7 +192,7 @@ These variables are assigned values and passed to GA class
         </td>
     </tr>
     <tr>
-        <td style="background-color:silver;">
+        <td>
             mutation_percent_genes
         </td>
         <td>
@@ -201,7 +211,7 @@ It must be >0 and <=100
 * For more information about parameters visit <a href="">PyGad Documentation</a>
 
 
-## GA Pattern
+### GA Pattern
 
 The pattern for any GA are theses steps:
 
@@ -210,7 +220,7 @@ The pattern for any GA are theses steps:
 3. Fitness_function
 4. Crossover and/or mutation
 
-## Crossover types
+### Crossover types
 
 
-## Mutation types
+### Mutation types
