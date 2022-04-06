@@ -7,42 +7,23 @@ pop_size = 50
 PERCENTAGE = 0.5 # how much of the current pop_routes to crossover for the next generation
 
 # ----------------------------------------------
-class City:
-    def __init__(self, x, y, i):
-        self.x = x
-        self.y = y
-        self.num = i
-    
-    def __repr__(self):
-        return self.__str__()
-
-    def __str__(self):
-        return "[" + str(self.x)+ " "+ str(self.y) + "]"
-
-# ----------------------------------------------
 class Route:
     def __init__(self):
         self.distance = 0
         self.path = random.sample(list(range(total_cities)), total_cities) # list of paths
 
-    def __str__(self):
-        string = ''
-        for i in self.path:
-            string += cities[self.path[i]]
-        return string
-
     # euclidean Distance
     def calcDistance(self):
         distance = 0
         for i, cityNum in enumerate(self.path):
-            distance += math.sqrt((cities[self.path[i]].x - cities[self.path[i-1]].x)**2 + \
-                                 (cities[self.path[i]].y - cities[self.path[i-1]].y)**2)
+            distance += math.sqrt((cities[self.path[i]][0] - cities[self.path[i-1]][0])**2 + \
+                                 (cities[self.path[i]][1] - cities[self.path[i-1]][1])**2)
         self.distance = distance
         return distance
 # ----------------------------------------------
 
 # randomly initializing the coordinates of the cities
-cities = [City(random.randint(0, 100), random.randint(0, 200), i) for i in range(total_cities)] 
+cities = [(random.randint(0, 100), random.randint(0, 200)) for i in range(total_cities)] 
 
 # population is list of routes
 pop_routes = [Route() for i in range(pop_size)]
