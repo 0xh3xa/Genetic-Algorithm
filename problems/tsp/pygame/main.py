@@ -60,10 +60,16 @@ def sortPop():
     global pop_routes
     pop_routes.sort(key = lambda route : route.distance, reverse = False)
     return
-'''
-Takes the top PERCENTAGE of the pop_routes for a particular generation and 
-produces a new pop_routes replacing the non essential members with new ones
-'''
+
+def get_random(upper):
+    index1 = random.randint(0, upper - 1)
+    index2 = random.randint(0, upper - 1)
+
+    # loop until getting different indices for the new population
+    while index1 == index2:
+        index2 = random.randint(0, upper - 1)
+    return [index1, index2]
+
 def crossover():
     global pop_routes
 
@@ -71,32 +77,34 @@ def crossover():
 
     # select pop_routes based on the percentage
     updated_pop.extend(pop_routes[: int(pop_size*PERCENTAGE)])
-
+    
+    # parent selection is random
     for i in range(pop_size - len(updated_pop)):
-        index1 = random.randint(0, len(updated_pop) - 1)
-        index2 = random.randint(0, len(updated_pop) - 1)
-
-        # loop until getting different indices for the parents
-        while index1 == index2:
-            index2 = random.randint(0, len(updated_pop) - 1)
+        index1, index2 = get_random(len(updated_pop))
 
         parent1 = updated_pop[index1]
         parent2 = updated_pop[index2]
 
         rand_index = random.randint(0, total_cities - 1)
 
-        # declare new child from this parents
-        # using random mutaiton
+        # declare new child from mating parent1 + parent2
         child = Route()
-        child.cityPath = parent1.cityPath[:rand_index]
+        child.path = parent1.path[:rand_index]
 
         # start:rand_index from first parent1 and rand_index:end from parent2
         # select paths from parent2 when not in child path
         # add other paths
-        notInChild = [path for path in parent2.cityPath if not path in child.cityPath]
+        notInChild = [path for path in parent2.path if not path in child.path]
 
-        child.cityPath.extend(notInChild)
+        child.path.extend(notInChild)
+
         
+        # perform random mutation
+        start, end = get_random(len(child.path))
+        swap = child.path[end]
+        child.path[end] = child.path[start]
+        child.path[start] = swap
+
         # add the child to the updated pop_routes
         updated_pop.append(child)
 

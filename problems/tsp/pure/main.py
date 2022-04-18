@@ -1,9 +1,10 @@
+from ast import Index
 import random
 import math
 
 
 total_cities = 4 # total number of cities 
-pop_size = 50
+pop_size = 10
 PERCENTAGE = 0.5 # how much of the current pop_routes to crossover for the next generation
 
 # ----------------------------------------------
@@ -34,6 +35,15 @@ def sortPop():
     pop_routes.sort(key = lambda route : route.distance, reverse = False)
     return
 
+def get_random(upper):
+    index1 = random.randint(0, upper - 1)
+    index2 = random.randint(0, upper - 1)
+
+    # loop until getting different indices for the new population
+    while index1 == index2:
+        index2 = random.randint(0, upper - 1)
+    return [index1, index2]
+
 def crossover():
     global pop_routes
 
@@ -44,12 +54,7 @@ def crossover():
     
     # parent selection is random
     for i in range(pop_size - len(updated_pop)):
-        index1 = random.randint(0, len(updated_pop) - 1)
-        index2 = random.randint(0, len(updated_pop) - 1)
-
-        # loop until getting different indices for the parents
-        while index1 == index2:
-            index2 = random.randint(0, len(updated_pop) - 1)
+        index1, index2 = get_random(len(updated_pop))
 
         parent1 = updated_pop[index1]
         parent2 = updated_pop[index2]
@@ -57,7 +62,6 @@ def crossover():
         rand_index = random.randint(0, total_cities - 1)
 
         # declare new child from mating parent1 + parent2
-        # mutation is random
         child = Route()
         child.path = parent1.path[:rand_index]
 
@@ -67,7 +71,14 @@ def crossover():
         notInChild = [path for path in parent2.path if not path in child.path]
 
         child.path.extend(notInChild)
+
         
+        # perform random mutation
+        start, end = get_random(len(child.path))
+        swap = child.path[end]
+        child.path[end] = child.path[start]
+        child.path[start] = swap
+
         # add the child to the updated pop_routes
         updated_pop.append(child)
 
@@ -101,6 +112,7 @@ def main():
 
 
     print("-------------------------------Result--------------------------------")
+    print(pop_routes)
     print("cities: {}".format(cities))
     print("The minimum distance is : {}".format(minDistance))
     print("A feasible path : {}".format(best_route.path))
