@@ -44,7 +44,7 @@ def get_random(upper):
         index2 = random.randint(0, upper - 1)
     return [index1, index2]
 
-def crossover():
+def crossover_and_mutation():
     global pop_routes
 
     updated_pop = []
@@ -101,7 +101,7 @@ def main():
             element.calcDistance()
 
         sortPop()
-        crossover()
+        crossover_and_mutation()
         
         for element in pop_routes:
             if element.distance < minDistance:
