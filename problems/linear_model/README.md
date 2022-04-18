@@ -15,7 +15,7 @@ This is simple problem which you can use Machine Learning, Artificial Neural Net
 
 
 <div style="border:2px solid gray;">
-    <img src="../../assets/problems/general/exp.png" alt="explanation"/>
+    <img src="../../assets/problems/linear_model/img.png" alt="explanation"/>
 </div>
 
 ### Fitness function
