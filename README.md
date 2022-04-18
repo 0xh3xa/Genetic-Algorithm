@@ -1,6 +1,7 @@
 ### Genetic Algorithms GA class
 
 This repository contains the practical for the Genetic Algorithms (GA) class
+
 [![hello_genetic](https://img.shields.io/static/v1?label=Genetic&message=Algorithms&color=blue&style=flat)](https://github.com/EbGazar/Genetic-Algorithm)
 [![Python](https://img.shields.io/static/v1?label=Language&message=Python&color=lightblue&style=flat)](https://github.com/EbGazar/Genetic-Algorithm)
 
@@ -16,8 +17,8 @@ This repository contains the practical for the Genetic Algorithms (GA) class
 
 - Is a model or abstraction of biological evolution based on Charles Darwin's theory of natural selection Developed by John Holland in the 1960s and 1970s
 
-<div style="text-align:center;">
-    <img src="assets/john-holland.png" alt="John Holland" style="border: 2px solid tan"/>
+<div align="center">
+    <img src="assets/john-holland.png" alt="John Holland" style="border: 2px solid tan; width: 200px;"/>
 </div>
 
 ### Advantages and Disadvantages of Genetic Algorithms (GA)
@@ -52,7 +53,7 @@ mutation rate, cross over rate, the selection method and its strength.
 
 ### AI vs. Machine Learning vs. Neural Networks vs. Deep Learning vs. Genetic Genetic Algorithms
 
-<div style="text-align:center;">
+<div align="center">
     <img src="assets/ai-subsets.png" alt="ai subsets" width="400" style="border: 2px solid tan"/>
 </div>
 
@@ -80,9 +81,9 @@ data set they demonstrate the ability to learn deeply
 
 Mimic the human brain through an artificial neural
 networks. Contains nodes in different layers that are connected and
-communicate with each other to make sense of voluminous input data
+communicate with each other to make sense of voluminous input data. Number of hidden layers are small usually 1-3 layers and more than that consider DL architecture
 
-<div style="text-align:center;">
+<div align="center">
     <a href="https://www.v7labs.com/blog/neural-network-architectures-guide">
         <img src="assets/neural-networks.png" alt="neural networks" width="600" style="border: 2px solid tan"/>
      </a>
@@ -90,9 +91,9 @@ communicate with each other to make sense of voluminous input data
 
 >> Deep Learning
 
-Subset of machine learning in which multilayered neural networks learn from vast amounts of data
+Subset of machine learning in which multilayered neural networks learn from vast amounts of data and the difference between DL and NN that DL contains many hidden layers
 
-<div style="text-align:center;">
+<div align="center">
     <a href="https://www.ibm.com/cloud/blog/ai-vs-machine-learning-vs-deep-learning-vs-neural-networks">
         <img src="assets/deeplearning.png" alt="neural networks" width="600" style="border: 2px solid tan"/>
      </a>
@@ -102,7 +103,7 @@ Subset of machine learning in which multilayered neural networks learn from vast
 
 Method used in artificial intelligence and computing used for finding optimized (maximum or minimum) solutions to search problems based on the theory of natural selection and evolutionary biology
 
-<div style="text-align:center;">
+<div align="center">
     <a href="https://towardsai.net/p/l/genetic-algorithm-optimization-algorithm">
         <img src="assets/genetic-algorithms.png" alt="neural networks" width="600" style="border: 2px solid tan"/>
      </a>
