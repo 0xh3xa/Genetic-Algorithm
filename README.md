@@ -50,6 +50,7 @@ mutation rate, cross over rate, the selection method and its strength.
 4. Network design and routing i.e Network routing
 5. Signal processing (filter design)
 
+---
 
 ### AI vs. Machine Learning vs. Neural Networks vs. Deep Learning vs. Genetic Genetic Algorithms
 
@@ -71,7 +72,7 @@ decisions:
 patterns in input data when machines can draw meaningful inferences from large volumes of
 data set they demonstrate the ability to learn deeply
 
-<div style="text-align:center;">
+<div align="center">
     <a href="https://www.researchgate.net/publication/354960266_Machine_Learning_Techniques_for_Personalised_Medicine_Approaches_in_Immune-Mediated_Chronic_Inflammatory_Diseases_Applications_and_Challenges/figures?lo=1">
         <img src="assets/machine_learning.jpg" alt="ai subsets" width="600" style="border: 2px solid tan"/>
      </a>
@@ -108,6 +109,8 @@ Method used in artificial intelligence and computing used for finding optimized 
         <img src="assets/genetic-algorithms.png" alt="neural networks" width="600" style="border: 2px solid tan"/>
      </a>
 </div>
+
+---
 
 ### Environment Setup
 
