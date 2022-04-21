@@ -36,3 +36,7 @@ The task is find appropriate a and b parameters for Y = aX + b
 <div align="center">
     <img src="../../assets/problems/linear_regression/fitness_function.png" alt="neural networks" width="600" style="border: 2px solid tan"/>
 </div>
+
+### Machine Linear Regression
+
+You can check the difference between the GA linear regression and Machine linear regression by using `sklearn.linear_model` https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
