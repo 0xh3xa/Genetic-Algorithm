@@ -117,7 +117,6 @@ Method used in artificial intelligence and computing used for finding optimized 
 1. Python-3
 2. Anaconda (Optional)
 3. PyGad
-4. PyGame (Optional)
 
 For code editor you can use:
 
@@ -137,11 +136,11 @@ The Libraries which are used
 ### Problems
 
 1. Linear Model
-2. Square function
+2. Max Square function
 3. Traveling salesman problem (TSP)
 4. Simple Linear Regression
 
-### GA Pattern
+### GA Patterns
 
 The pattern for any GA are theses steps:
 
