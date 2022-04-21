@@ -30,3 +30,9 @@ It's using a naive dataset based on the age and glucose
     
 The task is find appropriate a and b parameters for Y = aX + b
 , and answer a query what would be the value of Y when X = 65
+
+### GA Linear Regression fitness function
+
+<div align="center">
+    <img src="../../assets/problems/linear_regression/fitness_function.png" alt="neural networks" width="600" style="border: 2px solid tan"/>
+</div>

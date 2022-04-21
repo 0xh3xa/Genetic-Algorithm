@@ -13,7 +13,6 @@ The task is find appropriate a and b parameters for Y = aX + b
 """
 
 import pygad
-import numpy
 import math
 
 inputs = [43, 21, 25, 42, 57, 59]
@@ -32,7 +31,7 @@ def individual_fitness(parameters):
     return math.sqrt(sum_diff/(len(outputs)-2))
 
 
-def fitness_func(solutions, weight_idx):
+def fitness_func(solutions, _):
     return 1.0/individual_fitness(solutions)
 
 ga_instance = pygad.GA(num_generations=100,
@@ -57,5 +56,5 @@ print("-------------------------------Result--------------------------------")
 solution, solution_fitness, solution_idx = ga_instance.best_solution()
 print("Parameters of the best paramters : {solution}".format(solution=solution))
 
-print("Fitness value of the best weightes = {solution_fitness}".format(solution_fitness=solution_fitness))
+print("Fitness value of the best paramters = {solution_fitness}".format(solution_fitness=solution_fitness))
 print("When X {} Y equals: {}".format(65, (65*solution[0] + solution[1])))
