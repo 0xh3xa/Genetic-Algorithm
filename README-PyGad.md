@@ -79,11 +79,24 @@ These variables are assigned values and passed to GA class
             init_range_high
         </td>
         <td>
-            Mutation value is selected randomly init_range_low and init_range_high from the range specified by the
+            lower and upper value of the random range from which the gene values in the initial population
         </td>
         <td>
             init_range_low = 0
             init_range_high = 6
+        </td>
+    </tr>
+        <tr>
+        <td>
+            random_mutation_min_val
+            random_mutation_max_val
+        </td>
+        <td>
+            Used with random mutation they specify the min and max for the random range values
+        </td>
+        <td>
+            random_mutation_min_val = 0
+            random_mutation_max_val = 6
         </td>
     </tr>
     <tr>
@@ -168,4 +181,4 @@ These variables are assigned values and passed to GA class
 
 * PyGad initialize_population with the following (init_range_low, init_range_high, allow_duplicate_genes, True, gene_type)
 
-* For more information about parameters visit <a href="https://pygad.readthedocs.io/en/latest/">PyGad Documentation</a>
+* For more information about parameters visit <a href="https://pygad.readthedocs.io/en/latest/README_pygad_ReadTheDocs.html">PyGad Parameters</a>
