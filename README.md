@@ -152,5 +152,8 @@ The pattern for any GA are theses steps:
 
 ### Crossover types
 
+Todo
 
 ### Mutation types
+
+Todo
