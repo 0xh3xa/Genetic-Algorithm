@@ -139,6 +139,7 @@ The Libraries which are used
 2. Max Square function
 3. Traveling salesman problem (TSP)
 4. Simple Linear Regression
+5. Minimize function
 
 ### GA Patterns
 
