@@ -4,6 +4,8 @@ Is an open-source Python library for building the genetic algorithm and optimizi
 
 #### GA class parameters in PyGad library
 
+* For more information about parameters visit <a href="https://pygad.readthedocs.io/en/latest/README_pygad_ReadTheDocs.html">PyGad Parameters</a>
+
 These variables are assigned values and passed to GA class
 
 <table border="2">
@@ -168,10 +170,18 @@ These variables are assigned values and passed to GA class
     </tr>
     <tr>
         <td>
-            mutation_percent_genes
+            <ol>
+                <li>mutation_percent_genes</li>
+                <li>mutation_probability</li>
+                <li>mutation_num_genes</li>
+            </ol>
         </td>
         <td>
-            Percentage of genes to mutate, it must be >0 and <=100
+             <ol>
+                <li>Percentage of genes to mutate, it must be > 0 and <=100, <span style="background:orange;">has no action if mutation_probability or mutation_num_genes exist</span></li>
+                <li>probability of selecting a gene for applying the mutation operation, <span style="background:orange;">has no need for the 2 parameters mutation_percent_genes and mutation_num_genes</span></li>
+                <li> Number of genes to mutate which defaults to None meaning that no number is specified, <span style="background:orange;">has no action if the parameter mutation_probability exists</span></li>
+            </ol>
         </td>
         <td>
             mutation_percent_genes = 10
@@ -180,5 +190,3 @@ These variables are assigned values and passed to GA class
 </table>
 
 * PyGad initialize_population with the following (init_range_low, init_range_high, allow_duplicate_genes, True, gene_type)
-
-* For more information about parameters visit <a href="https://pygad.readthedocs.io/en/latest/README_pygad_ReadTheDocs.html">PyGad Parameters</a>
