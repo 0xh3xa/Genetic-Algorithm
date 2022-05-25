@@ -4,7 +4,6 @@
 
 import pygad
 import numpy
-import random
 import sys
 
 
@@ -21,35 +20,19 @@ def fitness_func(solutions, _):
 # Parameters
 fitness_function = fitness_func
 
-num_generations = 50
-num_parents_mating = 2
-
-sol_per_pop = 100
-
-num_genes = 2
-
-parent_selection_type = "rank"
-
-keep_parents = 1
-
-crossover_type = "single_point"
-
-mutation_type = "random"
-
-mutation_percent_genes = 0.01
 gene_space = [{'low': 1, 'high': 16}, {'low': 3, 'high': 50}]
 
-ga_instance = pygad.GA(num_generations=num_generations,
-                       num_parents_mating=num_parents_mating,
+ga_instance = pygad.GA(num_generations=50,
+                       num_parents_mating=2,
                        fitness_func=fitness_function,
-                       sol_per_pop=sol_per_pop,
-                       num_genes=num_genes,
+                       sol_per_pop=100,
+                       num_genes=2,
                        gene_space=gene_space,
-                       parent_selection_type=parent_selection_type,
-                       keep_parents=keep_parents,
-                       crossover_type=crossover_type,
-                       mutation_type=mutation_type,
-                       mutation_percent_genes=mutation_percent_genes)
+                       parent_selection_type="rank",
+                       keep_parents=1,
+                       crossover_type="single_point",
+                       mutation_type="random",
+                       mutation_percent_genes=0.01)
 
 ga_instance.run()
 
