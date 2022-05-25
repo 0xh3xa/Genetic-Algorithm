@@ -45,7 +45,7 @@ ga_instance = pygad.GA(num_generations=100,
                        keep_parents=1,
                        crossover_type="uniform",
                        mutation_type="random",
-                       mutation_percent_genes=10)
+                       mutation_percent_genes=0.01)
 
 ga_instance.run()
 

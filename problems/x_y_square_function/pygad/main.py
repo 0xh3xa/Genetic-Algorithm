@@ -1,18 +1,22 @@
-# This script shows the GA using PyGad for this max function:
-# y = x^2
+# This script shows the GA using PyGad for this function:
+# F(x) = x^2 + y^2
+# 1 ≤ x ≤ 15 and y ≥ 3 with x + y = 7
 
 import pygad
 import numpy
 import random
+import sys
 
-val = random.random()
 
-desired_output = 64
+def fitness_func(solutions, _):
+    x = int(solutions[0])
+    y = int(solutions[1])
 
-def fitness_func(solutions, solution_idx):
-    output = solutions[0]
-    output *= output
-    return 1.0/numpy.abs(output - desired_output)
+    add = x + y
+    if (add != 7):
+        return 1.0/sys.maxsize
+    output = numpy.power(x , 2) + numpy.power(y, 2)
+    return 1.0/numpy.abs(output)
 
 # Parameters
 fitness_function = fitness_func
@@ -20,12 +24,9 @@ fitness_function = fitness_func
 num_generations = 50
 num_parents_mating = 2
 
-sol_per_pop = 8
+sol_per_pop = 100
 
-num_genes = 1
-
-init_range_low = 0
-init_range_high = 10
+num_genes = 2
 
 parent_selection_type = "rank"
 
@@ -35,15 +36,15 @@ crossover_type = "single_point"
 
 mutation_type = "random"
 
-mutation_percent_genes = 100
+mutation_percent_genes = 0.01
+gene_space = [{'low': 1, 'high': 16}, {'low': 3, 'high': 50}]
 
 ga_instance = pygad.GA(num_generations=num_generations,
                        num_parents_mating=num_parents_mating,
                        fitness_func=fitness_function,
                        sol_per_pop=sol_per_pop,
                        num_genes=num_genes,
-                       init_range_low=init_range_low,
-                       init_range_high=init_range_high,
+                       gene_space=gene_space,
                        parent_selection_type=parent_selection_type,
                        keep_parents=keep_parents,
                        crossover_type=crossover_type,
@@ -57,8 +58,9 @@ ga_instance.run()
 print("-------------------------------Result--------------------------------")
 
 solution, solution_fitness, solution_idx = ga_instance.best_solution()
-print("Parameters of the best solution : {solution}".format(solution=solution))
-print("Fitness value of the best solution = {solution_fitness}".format(solution_fitness=solution_fitness))
 
-prediction = solution
-print("Predicted output based on the best solution : {prediction}".format(prediction=prediction))
+x = int(solution[0])
+y = int(solution[1])
+
+print("Fitness value of the best solution = {solution_fitness}".format(solution_fitness=solution_fitness))
+print("X: ", x, ", Y: ", y)
