@@ -142,10 +142,12 @@ PyGad (Genetic Python library) <a href="./README-PyGad.md">ReadME-PyGad</a>
 
 The pattern for any GA are theses steps:
 
-1. Declare input(s)
-2. Declare output
-3. Fitness_function
-4. Crossover and/or mutation
+1. Define input(s)
+2. Define output
+3. Encoding type
+4. Fitness function
+5. Crossover and/or mutation
+6. Termination
 
 ### Crossover types
 
