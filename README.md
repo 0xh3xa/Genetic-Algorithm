@@ -58,11 +58,11 @@ mutation rate, cross over rate, the selection method and its strength.
     <img src="assets/ai-subsets.png" alt="ai subsets" width="400" style="border: 2px solid tan"/>
 </div>
 
->> Artificial Intelligence
+> Artificial Intelligence
 
 Mimics cognitive functions that humans associate with other human minds, such as learning and problem solving
 
->> Machine Learning
+> Machine Learning
 
 Subset of AI that includes algorithms that parse data, learn
 from that data, and then apply what they’ve learned to make informed
@@ -78,7 +78,7 @@ data set they demonstrate the ability to learn deeply
      </a>
 </div>
 
->> Neural Networks
+> Neural Networks
 
 Mimic the human brain through an artificial neural
 networks. Contains nodes in different layers that are connected and
@@ -90,7 +90,7 @@ communicate with each other to make sense of voluminous input data. Number of hi
      </a>
 </div>
 
->> Deep Learning
+> Deep Learning
 
 Subset of machine learning in which multilayered neural networks learn from vast amounts of data and the difference between DL and NN that DL contains many hidden layers
 
@@ -100,7 +100,7 @@ Subset of machine learning in which multilayered neural networks learn from vast
      </a>
 </div>
 
->> Genetic Algorithms
+> Genetic Algorithms
 
 Method used in artificial intelligence and computing used for finding optimized (maximum or minimum) solutions to search problems based on the theory of natural selection and evolutionary biology
 
@@ -128,10 +128,7 @@ For code editor you can use:
 
 Some solutions are using libraries like PyGad while others not (Pure Python implementation). Some problems' solutions are both using libraries and Pure Python.
 
-The Libraries which are used
-
-1. PyGad (Genetic Python library) <a href="./README-PyGad.md">ReadME-PyGad</a>
-2. PyGame (Used for animation purpose)
+PyGad (Genetic Python library) <a href="./README-PyGad.md">ReadME-PyGad</a>
 
 ### Problems
 
